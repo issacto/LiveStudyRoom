@@ -1,10 +1,16 @@
 import React from 'react';
 import './App.css';
 import VideoPage from "./Screens/VideoPage"
+import LoginPage from "./Screens/LoginPage"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
-        <VideoPage />
+    <Switch>
+    <Route path="/" component={LoginPage} exact />
+    <Route path="/VideoPage" component={VideoPage} exact />
+    
+    </Switch>
   );
 };
 
