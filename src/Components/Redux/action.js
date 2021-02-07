@@ -3,3 +3,8 @@ export const login = payload => ({
     payload: payload,
   });
   
+
+  export const logout = () => ({
+    type:  'LOGOUTED',
+  });
+  

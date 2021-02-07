@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import VideoChat from "../Components/VideoChat/VideoChat.js";
-import firebaseApp,{provider} from "../Components/Firebase/firebase"
+import firebaseApp,{provider,fbProvider,ghProvider} from "../Components/Firebase/firebase"
 import PropTypes from "prop-types";
 import "firebase/auth";
 import history from "../history";
 import { connect } from 'react-redux';
 import store from "../Components/Redux/store"
 import {login} from "../Components/Redux/action"
+import FbLogo from "../Components/Images/facebook.svg"
+import GhLogo from "../Components/Images/github.svg"
+import  { ReactComponent as StudyLogo }from"../Components/Images/reading.svg"
+import "../stylesheet.css"
+
 
 class LoginPage extends Component {
   constructor(props) {
@@ -14,6 +19,56 @@ class LoginPage extends Component {
   }
   login=()=>{
     this.signInWithGoogle();
+  }
+  signInWithFacebook=()=>{
+    firebaseApp.auth()
+  .signInWithRedirect(fbProvider)
+  .then((result) => {
+    /** @type {firebase.auth.OAuthCredential} */
+    var credential = result.credential;
+
+    // The signed-in user info.
+    var user = result.user;
+    console.log(user)
+    //store.dispatch(login(user));
+    // ...
+  })
+  .catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+
+    // ...
+  });
+  }
+  signInWithGithub=()=>{
+    firebaseApp
+  .auth()
+  .signInWithPopup(ghProvider)
+  .then((result) => {
+    /** @type {firebase.auth.OAuthCredential} */
+    var credential = result.credential;
+
+    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+    var token = credential.accessToken;
+
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
   }
 
   signInWithGoogle = () => {
@@ -24,9 +79,6 @@ class LoginPage extends Component {
      
       var credential = result.credential;
  
-     /**This gives you a Google Access Token. You can use it to access the Google API.
-     var token = credential.accessToken;
-      The signed-in user info.*/
      var user = result.user.displayName;
      store.dispatch(login(user));
 
@@ -53,10 +105,19 @@ class LoginPage extends Component {
       
       
   return (
-      <div class="hollow button primary" onClick={this.login}  >
-      <img width="30vh" style={{marginNottom:"3px", marginRight:"5px"}} alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-      <p style={{fontSize:"5vh", display:"inline"}}>Sign in with Google</p>
-      <p>{console.log(this.props.login.name)}</p>
+    <div className="main-container">
+      <div className="left-container">
+      <StudyLogo fill="white" stroke="grey"/>
+      </div>
+      <div className="right-container">
+       <div class="hollow button primary" onClick={this.login}  >
+      <img width="30vh" style={{marginBottom:"3px", marginRight:"5px"}} alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+      <p style={{fontSize:"5vh", display:"inline"}}> Google</p>
+      <div onClick={this.signInWithFacebook}><img width="32vh" src={FbLogo}/><p style={{fontSize:"4.5vh", display:"inline"}}> Facebook</p></div>
+        <div onClick={this.signInWithGithub}><img width="34vh" style={{backgroundColor:"white",borderRadius:"50%"}} src={GhLogo}/><p style={{fontSize:"5vh",display:"inline"}}> Github</p></div>
+        </div>
+     
+    </div>
     </div>
     );
   }

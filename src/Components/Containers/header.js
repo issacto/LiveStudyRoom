@@ -12,7 +12,7 @@ export default class NavigationBar extends Component {
                 fontSize: 20,
                 color:"white",
               }}>
-                <h1 style={{display:"inline"}}>EveryMinCounts</h1>
+                <h1 style={{display:"inline"}}>LiveStudyRoom</h1>
                 <Logo fill="white" stroke="white" width="3%" height="70%" style={{display:"inline"}}/>
                 
                 </Link>

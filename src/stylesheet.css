@@ -41,14 +41,14 @@
 .main-container {
     display: flex;
     width: 100%;
-    min-height: 80vh;
+    min-height: 76vh;
     margin-top: 1vh;
     text-align: center;
     
 }
 .left-container {
     flex: 0 1 50%;
-    min-height: 100%;
+    min-height: 90%;
     max-width: 50%;
     background: rgb(73, 48, 129);
     padding: .5em;
@@ -57,12 +57,29 @@
 }
 .right-container {
     flex: 0 1 50%;
-    min-height: 100%;
+    min-height: 90%;
     max-width: 50%;
     background: rgb(138, 187, 199);
     padding: .5em;
     text-align: center;
-    align-items: flex-start;
+    align-content: center;
 
 }
+
+.logoutButton {
+    width: 6vh;
+    height:6vh;
+    border-radius: 0.8vh;
+    position:fixed;
+    color:black;
+    background-color: rgb(62, 170, 170);
+    top: 2vh;
+    right:4vh;
+    text-align: center;
+    justify-content:  center;
+    align-items: center;
+  }
+  .logo{
+      width:4vh
+  }
   

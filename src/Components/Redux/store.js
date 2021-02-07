@@ -4,13 +4,17 @@ import { createStore } from 'redux';
 import { combineReducers } from 'redux';
 import login from "./action";
 
-function reducer(state = "", action) {
+const initialState = {
+  name: ""
+};
+
+function reducer(state = initialState, action) {
   switch(action.type) {
     case 'LOGINED':
       return {
         name:action.payload
       };
-    case 'LOGOUT':
+    case 'LOGOUTED':
       return {
         name: ""
       };

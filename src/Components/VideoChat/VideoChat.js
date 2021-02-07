@@ -2,14 +2,17 @@ import React, { useState, useCallback, useEffect } from "react";
 import Video from "twilio-video";
 import Lobby from "./Lobby";
 import Room from "./Room";
+import {writeData,deleteData,getUserData} from "../Firebase/action"
+import { displayPartsToString } from "typescript";
+
 
 const VideoChat = props=> {
   const [input, setThings] = useState(props);
   const username = input.inputUsername
   const isSetRoom = input.inputIsSetRoom
-  console.log("awbfeiG")
   console.log(isSetRoom)
   console.log(username)
+  const [data, setData] = useState({ hits: [] });
   const [roomName, setRoomName] = useState("");
   const [room, setRoom] = useState(null);
   const [connecting, setConnecting] = useState(false);
@@ -23,6 +26,7 @@ const VideoChat = props=> {
     async (event) => {
       event.preventDefault();
       setConnecting(true);
+      writeData(roomName)
       const data = await fetch("/video/token", {
         method: "POST",
         body: JSON.stringify({
@@ -52,15 +56,27 @@ const VideoChat = props=> {
     setRoom((prevRoom) => {
       if (prevRoom) {
         prevRoom.localParticipant.tracks.forEach((trackPub) => {
+
           trackPub.track.stop();
+          
         });
         prevRoom.disconnect();
       }
+      
+      deleteData(prevRoom.name)
       return null;
     });
   }, []);
+  const display = useCallback(
+    async (event) => {
+            var x= await getUserData();
+          return x} )
 
-  useEffect(() => {
+  useEffect(() => async () => {
+    const result = await 
+      display()
+    ;
+    setData(result);
     if (room) {
       const tidyUp = (event) => {
         if (event.persisted) {
@@ -99,8 +115,16 @@ const VideoChat = props=> {
       );
 
     }else{
+      {console.log(data)}
       render = (
-        <p>aeffea</p>
+        <div>
+        <p>{421214
+          }</p>
+          {data!=null|data!=undefined? data.hits.map(person => (
+            <p>Hello, {person} !</p> 
+            
+        )):null}
+        </div>
       )
     }
     
