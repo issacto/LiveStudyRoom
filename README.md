@@ -3,7 +3,9 @@
 <br/>Author: Issac To
 <hr/>
 
-![](https://github.com/issacto/LiveStudyRoom/blob/main/asset/ladningPage.png)
+| Landing         | Main           | 
+| ------------- |:-------------:| 
+| <img src="asset/landingPage.png" backgroundColor= white width=100%/>   | <img src="Images/mainPage.png" width=100%/> |
 
 ## 1. 🎉 Inspiration/What it does
 
