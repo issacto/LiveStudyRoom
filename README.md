@@ -4,13 +4,12 @@
 <hr/>
 
 
-## 1. 🎉 Inspiration
+## 1. 🎉 Inspiration/What it does
 
 Are you a big fan of study group? I am sure a lot of you would miss revising efficiently at the study room. Forunately,LiveStudyRoom offers you the experience to study with people across the world together in a video meeting room with cameras opened. It is muted and works just like a study room where you would be pressurized by the environment and become disciplined. You could make a meeting room yourself or you could join others study room. All rooms at LiveStudyRoom are publicly open!
 
 
 ## 2. 📌 Structure
-
 
 ### A. 💎 Framework
 * React
@@ -36,7 +35,7 @@ const firebaseConfig = {
     measurementId: Yours,
   };
 ```
-2. Fill in your Twillio credentials inside the .env file
+2. Fill in your Twilio credentials inside the .env file
 
 ``` javascript
 
@@ -56,8 +55,14 @@ npm run dev
 
 5. Enjoy!
 
-## 4.  ⚠️ Problem
-1. 
-
+## 4.  ⚠️Things I learnt
+1. Challenge
+Faced severe redux problem in the start due to conflicts with history.push. Spent more than two hours on it.
+2. Accomplishments
+Built the whole project soly within 24 hours. That is already something extraordinary for me
+3. What we (I) learned
+Try to solve other parts first next time when i get stuck
+4. What's next for LiveStudyRoom
+Hopefully could become a open-source project/ deploy on heroku
 ## 5.  ↗️ Reference
 1. https://www.twilio.com/blog/video-chat-react-hooks (Huge Shoutout!)
