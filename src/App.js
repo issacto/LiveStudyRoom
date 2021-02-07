@@ -10,13 +10,14 @@ import { connect } from 'react-redux';
 import logoutLogo from "./Components/Images/logout.svg"
 import store from "./Components/Redux/store"
 import {logout} from "./Components/Redux/action"
-
+import RoomAvailablePage from "./Screens/RoomAvailablePage"
+import CancelLogo from "./Components/Images/cancel.svg"
 import ChoosePage from "./Screens/ChoosePage";
 class App extends Component{
   render(){
   return (
     <div className="Board">
-       {this.props.login.name==""?null:<img className="logoutButton"src ={logoutLogo} onClick={()=> store.dispatch(logout())}/>}
+       {this.props.login.name==""?null:<img className="logoutButton"src ={CancelLogo} onClick={()=> store.dispatch(logout())}/>}
     <Header/>
     <div className="main">
       {console.log(this.props.login.name)}
@@ -25,12 +26,14 @@ class App extends Component{
     <Route path="/" component={LoginPage} exact />
     <Route path="/VideoPage" component={LoginPage} exact />
     <Route path="/ChoosePage" component={LoginPage} exact />
+    <Route path="/RoomAvailablePage" component={LoginPage} exact />
     </>:
     <>
      
     <Route path="/" component={ChoosePage} exact />
     <Route path="/VideoPage" component={VideoPage} exact />
     <Route path="/ChoosePage" component={ChoosePage} exact />
+    <Route path="/RoomAvailablePage" component={RoomAvailablePage} exact />
     </>
     }
     </div>

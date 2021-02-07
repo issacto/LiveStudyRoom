@@ -30,8 +30,10 @@ const Room = ({ roomName, room, handleLogout }) => {
 
   return (
     <div className="room">
-      <h2>Room: {roomName}</h2>
-      <button onClick={handleLogout}>Log out</button>
+      <div>
+      <h2 style={{fontSize:"4vh", fontWeight:"bold"}}>Room: {roomName}</h2>
+      <button onClick={handleLogout}>Quit Meeting</button>
+      </div>
       <div className = "displayScroll">
       <div className="local-participant">
         {room ? (

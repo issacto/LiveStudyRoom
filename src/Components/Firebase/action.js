@@ -19,8 +19,6 @@ export function deleteData(roomNumber){
 }
   
 export async function getUserData () {
-  const docRef = db.collection('meetingrooms').doc('Current');
-  await db.collection('meetingrooms').doc('Current').get()
-        .then(snapshot => {console.log(snapshot.data().currentList);return snapshot.data().currentList})
-  console.log('DATA RETRIEVED');
+  const snapshot  = await db.collection('meetingrooms').doc('Current').get();
+  return snapshot.data().currentList;
 }

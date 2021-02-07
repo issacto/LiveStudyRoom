@@ -60,7 +60,7 @@
     min-height: 90%;
     max-width: 50%;
     background: rgb(138, 187, 199);
-    padding: .5em;
+    padding: 3em;
     text-align: center;
     align-content: center;
 
@@ -69,12 +69,12 @@
 .logoutButton {
     width: 6vh;
     height:6vh;
-    border-radius: 0.8vh;
+    border-radius:50%;
     position:fixed;
     color:black;
     background-color: rgb(62, 170, 170);
-    top: 2vh;
-    right:4vh;
+    top: 1vh;
+    right:5vh;
     text-align: center;
     justify-content:  center;
     align-items: center;
@@ -83,3 +83,15 @@
       width:4vh
   }
   
+
+.bluewords{
+    color: rgb(62, 170, 170);
+}
+
+.scrollableBox {
+    height:25vh;
+    font-size: 5vh;
+    border:4px solid rgb(62, 170, 170);
+    overflow-y: auto;
+  }
+ 

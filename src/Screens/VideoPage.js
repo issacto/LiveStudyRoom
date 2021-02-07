@@ -15,12 +15,6 @@ class VideoPage extends Component {
 
 
   render() {
-    console.log("afeib")
-    console.log(",ma fek")
-    console.log(this.props.location.isSetRoom)
-  
-      
-      
   return (
       <VideoChat inputUsername={this.state.username} inputIsSetRoom={this.props.location.isSetRoom}/>
     );

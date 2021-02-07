@@ -106,16 +106,29 @@ class LoginPage extends Component {
       
   return (
     <div className="main-container">
-      <div className="left-container">
-      <StudyLogo fill="white" stroke="grey"/>
+      <div className="left-container"><br/><br/>
+      <StudyLogo fill="white" stroke="rgb(138, 187, 199)" width="80vh"/>
       </div>
-      <div className="right-container">
-       <div class="hollow button primary" onClick={this.login}  >
-      <img width="30vh" style={{marginBottom:"3px", marginRight:"5px"}} alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+      <div className="right-container" style={{ background: "rgb(73, 48, 129)"}}>
+      <br/><h1 className="bluewords" style={{ fontWeight:"bold", fontSize:"4.4vh"}}>"Study Room in Your Home"</h1>
+      <hr style={{backgroundColor:"rgb(17, 17, 20)", marginBottom:"3vh",marginTop:"2vh"}}></hr>
+      <div style={{fontSize:"4vh"}}>
+        The website offers you the unique experience to study with others online.
+        It is muted and works just like a study room. Let's encourage each other during the toughest time.
+        <br/> <br/>Login with Google/Github/Facebook!
+      </div>
+        <hr style={{backgroundColor:"rgb(17, 17, 20)", marginBottom:"3vh",marginTop:"3vh"}}></hr>
+      
+        <div style={{display:"inline"}} onClick={this.signInWithGithub}><img width="36vh" style={{backgroundColor:"white",borderRadius:"50%"}} src={GhLogo}/><p style={{fontSize:"5vh",display:"inline"}}> Github</p></div>
+        <div class="hollow button primary" style={{display:"inline",marginLeft:"3vh"}}onClick={this.login}  >
+      <img width="32vh" style={{marginBottom:"3px", marginRight:"5px"}} alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
       <p style={{fontSize:"5vh", display:"inline"}}> Google</p>
-      <div onClick={this.signInWithFacebook}><img width="32vh" src={FbLogo}/><p style={{fontSize:"4.5vh", display:"inline"}}> Facebook</p></div>
-        <div onClick={this.signInWithGithub}><img width="34vh" style={{backgroundColor:"white",borderRadius:"50%"}} src={GhLogo}/><p style={{fontSize:"5vh",display:"inline"}}> Github</p></div>
+      <div style={{display:"inline",marginLeft:"3vh"}}onClick={this.signInWithFacebook}><img width="32vh" src={FbLogo}/><p style={{fontSize:"4.5vh", display:"inline"}}> Facebook</p></div>
+        
+        
+        
         </div>
+        
      
     </div>
     </div>

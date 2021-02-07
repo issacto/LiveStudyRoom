@@ -118,8 +118,7 @@ const VideoChat = props=> {
       {console.log(data)}
       render = (
         <div>
-        <p>{421214
-          }</p>
+        <p>ERROR</p>
           {data!=null|data!=undefined? data.hits.map(person => (
             <p>Hello, {person} !</p> 
             
