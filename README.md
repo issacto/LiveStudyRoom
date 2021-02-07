@@ -57,12 +57,12 @@ npm run dev
 
 ## 4.  ⚠️Things I learnt
 1. Challenge
-Faced severe redux problem in the start due to conflicts with history.push. Spent more than two hours on it.
+<br/>Faced severe redux problem in the start due to conflicts with history.push. Spent more than two hours on it.
 2. Accomplishments
-Built the whole project soly within 24 hours. That is already something extraordinary for me
+<br/>Built the whole project soly within 24 hours. That is already something extraordinary for me
 3. What we (I) learned
-Try to solve other parts first next time when i get stuck
+<br/>Try to solve other parts first next time when i get stuck
 4. What's next for LiveStudyRoom
-Hopefully could become a open-source project/ deploy on heroku
+<br/>Hopefully could become a open-source project/ deploy on heroku
 ## 5.  ↗️ Reference
-1. https://www.twilio.com/blog/video-chat-react-hooks (Huge Shoutout!)
+<br/>1. https://www.twilio.com/blog/video-chat-react-hooks (Huge Shoutout!)
