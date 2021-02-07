@@ -113,9 +113,9 @@ class LoginPage extends Component {
       <br/><h1 className="bluewords" style={{ fontWeight:"bold", fontSize:"4.4vh"}}>"Study Room in Your Home"</h1>
       <hr style={{backgroundColor:"rgb(17, 17, 20)", marginBottom:"3vh",marginTop:"2vh"}}></hr>
       <div style={{fontSize:"4vh"}}>
-        The website offers you the unique experience to study with others online.
-        It is muted and works just like a study room. Let's encourage each other during the toughest time.
-        <br/> <br/>Login with Google/Github/Facebook!
+        LiveStudyRoom offers you the unique experience to study with others online.
+        The rooms are muted and work like real study rooms. Let's encourage each other during the toughest time.
+        <br/> <br/><i className="bluewords">Login with Google/Github/Facebook!</i>
       </div>
         <hr style={{backgroundColor:"rgb(17, 17, 20)", marginBottom:"3vh",marginTop:"3vh"}}></hr>
       
