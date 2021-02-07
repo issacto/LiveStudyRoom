@@ -18,25 +18,31 @@ Are you a big fan of study group? I am sure a lot of you would miss revising eff
 * Express
 * Node
 
-### B. 🚀 Video Plugin
+### B. 🚀 Video Streaming Plugin
 * Twillio
 
 ## 2.  📝 Implementation
 
-1. Fill in your mongodb database uri inside the config/key.js file
+1. Fill in your Google Firebase database uris inside the src/Components/Firebase/firebase.js file
 ``` javascript
-module.exports = {
-    mongoURI: YourMongodbLink,
-    useUnifiedTopology: true ,
-    secretOrKey: "secret"
-};
+const firebaseConfig = {
+    apiKey: Yours,
+    authDomain: Yours,
+    projectId:Yours,
+    databaseURL: Yours,
+    storageBucket: Yours,
+    messagingSenderId:Yours,
+    appId: Yours,
+    measurementId: Yours,
+  };
 ```
-2. Fill in your Twillio credentials inside expertAi.py.
+2. Fill in your Twillio credentials inside the .env file
 
 ``` javascript
 
-os.environ["EAI_USERNAME"] = Your_Experai_Username
-os.environ["EAI_PASSWORD"] = Your_Experai_Password
+TWILIO_ACCOUNT_SID= Yours
+TWILIO_API_KEY= Yours
+TWILIO_API_SECRET= Yours
 
 ```
 
@@ -48,14 +54,10 @@ npm run dev
 
 4. Go to http://localhost:3000
 
-
-
-
-
+5. Enjoy!
 
 ## 4.  ⚠️ Problem
-1. Due to the limitations of Mongodb free tier scheme, tubasite doesn't allow clients to edit, comment and like their comments. 
-2. Due to the limitations of Heroku free tier deployment scheme, it may take several seconds to load the heroku website
+1. 
 
 ## 5.  ↗️ Reference
 1. https://www.twilio.com/blog/video-chat-react-hooks (Huge Shoutout!)

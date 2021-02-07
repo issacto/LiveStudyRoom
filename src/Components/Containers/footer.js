@@ -5,7 +5,7 @@ export default class Footer extends Component {
     render() {
         return(
             <div className="footer">
-                <p className="footerWords" style={{display:"inline"}}>@Copyright </p>
+                <p className="footerWords" style={{display:"inline"}}>@author </p>
                 <a href={"https://github.com/issacto"}><p className="footerWords"  style={{display:"inline"}}> TOTO2021</p></a>
 
             </div>

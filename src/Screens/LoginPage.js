@@ -119,15 +119,22 @@ class LoginPage extends Component {
       </div>
         <hr style={{backgroundColor:"rgb(17, 17, 20)", marginBottom:"3vh",marginTop:"3vh"}}></hr>
       
-        <div style={{display:"inline"}} onClick={this.signInWithGithub}><img width="36vh" style={{backgroundColor:"white",borderRadius:"50%"}} src={GhLogo}/><p style={{fontSize:"5vh",display:"inline"}}> Github</p></div>
-        <div class="hollow button primary" style={{display:"inline",marginLeft:"3vh"}}onClick={this.login}  >
-      <img width="32vh" style={{marginBottom:"3px", marginRight:"5px"}} alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-      <p style={{fontSize:"5vh", display:"inline"}}> Google</p>
-      <div style={{display:"inline",marginLeft:"3vh"}}onClick={this.signInWithFacebook}><img width="32vh" src={FbLogo}/><p style={{fontSize:"4.5vh", display:"inline"}}> Facebook</p></div>
+        <table  >
+       <tbody>
+       <tr>
+       <td><div style={{display:"inline"}} onClick={this.signInWithGithub}><img width="36vh" style={{backgroundColor:"white",borderRadius:"50%"}} src={GhLogo}/><p style={{fontSize:"5vh",display:"inline"}}> Github</p></div></td>
+
+        <td ><div class="hollow button primary" style={{display:"inline",marginLeft:"3vh"}}onClick={this.login}  > 
+        <img width="32vh" style={{marginBottom:"3px", marginRight:"5px"}} alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+         <p style={{fontSize:"5vh", display:"inline"}}> Google</p> </div></td>
+
+         <td><div style={{display:"inline",marginLeft:"3vh"}}onClick={this.signInWithFacebook}><img width="32vh" src={FbLogo}/><p style={{fontSize:"4.5vh", display:"inline"}}> Facebook</p></div></td>
+      </tr>
+      </tbody>
+      </table>
         
         
-        
-        </div>
+       
         
      
     </div>
