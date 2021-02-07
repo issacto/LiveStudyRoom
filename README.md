@@ -7,7 +7,6 @@
 | ------------- |:-------------:| 
 | <img src="asset/landingPage.png" backgroundColor= white width=100%/>   | <img src="asset/mainPage.png" width=100%/> |
 | RoomInfo         | RoomIn         | 
-| ------------- |:-------------:| 
 | <img src="asset/room.png" width=100%/> |  <img src="asset/roomInfoPage.png" backgroundColor= white width=100%/>   |
 
 ## 1. 🎉 Inspiration/What it does
