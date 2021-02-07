@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Participant from "./Participant";
-
+import "../../stylesheet.css"
 const Room = ({ roomName, room, handleLogout }) => {
   const [participants, setParticipants] = useState([]);
 
@@ -32,6 +32,7 @@ const Room = ({ roomName, room, handleLogout }) => {
     <div className="room">
       <h2>Room: {roomName}</h2>
       <button onClick={handleLogout}>Log out</button>
+      <div className = "displayScroll">
       <div className="local-participant">
         {room ? (
           <Participant
@@ -42,8 +43,8 @@ const Room = ({ roomName, room, handleLogout }) => {
           ""
         )}
       </div>
-      <h3>Remote Participants</h3>
       <div className="remote-participants">{remoteParticipants}</div>
+      </div>
     </div>
   );
 };

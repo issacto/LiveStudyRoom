@@ -3,13 +3,10 @@ import Video from "twilio-video";
 import Lobby from "./Lobby";
 import Room from "./Room";
 
-const VideoChat = props=> {
-  const [input, setThings] = useState(props);
-  const username = input.inputUsername
-  const isSetRoom = input.inputIsSetRoom
-  console.log("awbfeiG")
-  console.log(isSetRoom)
-  console.log(username)
+const VideoChatSet = () => {
+  const username = "1234";
+
+  
   const [roomName, setRoomName] = useState("");
   const [room, setRoom] = useState(null);
   const [connecting, setConnecting] = useState(false);
@@ -21,6 +18,7 @@ const VideoChat = props=> {
 
   const handleSubmit = useCallback(
     async (event) => {
+        
       event.preventDefault();
       setConnecting(true);
       const data = await fetch("/video/token", {
@@ -61,8 +59,10 @@ const VideoChat = props=> {
   }, []);
 
   useEffect(() => {
+   
     if (room) {
       const tidyUp = (event) => {
+        
         if (event.persisted) {
           return;
         }
@@ -80,32 +80,23 @@ const VideoChat = props=> {
   }, [room, handleLogout]);
 
   let render;
+  
   if (room) {
     render = (
       <Room roomName={roomName} room={room} handleLogout={handleLogout} />
     );
   } else {
-    if(isSetRoom){
-      render = (
-      
-        <Lobby
-          username={username}
-          roomName={roomName}
-          handleRoomNameChange={handleRoomNameChange}
-          handleSubmit={handleSubmit}
-          connecting={connecting}
-        />
-        
-      );
-
-    }else{
-      render = (
-        <p>aeffea</p>
-      )
-    }
-    
+    render = (
+      <Lobby
+        username={username}
+        roomName={roomName}
+        handleRoomNameChange={handleRoomNameChange}
+        handleSubmit={handleSubmit}
+        connecting={connecting}
+      />
+    );
   }
   return render;
 };
 
-export default VideoChat;
+export default VideoChatSet;
