@@ -13,6 +13,7 @@ import {logout} from "./Components/Redux/action"
 import RoomAvailablePage from "./Screens/RoomAvailablePage"
 import CancelLogo from "./Components/Images/cancel.svg"
 import ChoosePage from "./Screens/ChoosePage";
+
 class App extends Component{
   render(){
   return (
