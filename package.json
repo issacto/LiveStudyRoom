@@ -12,6 +12,7 @@
     "express-pino-logger": "^5.0.0",
     "firebase": "^6.0.2",
     "firebase-admin": "^9.4.2",
+    "grpc": "^1.24.4",
     "history": "^5.0.0",
     "i": "^0.3.6",
     "node-pre-gyp": "^0.17.0",
@@ -24,6 +25,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "redux": "^4.0.5",
+    "request": "^2.88.2",
     "twilio": "^3.54.2",
     "twilio-video": "^2.10.0"
   },
