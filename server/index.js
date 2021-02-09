@@ -38,7 +38,7 @@ app.post('/video/token', (req, res) => {
   sendTokenResponse(token, res);
 });
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5000;
 app.listen(port, () =>
   console.log('Express server is running on localhost:3001')
 );
