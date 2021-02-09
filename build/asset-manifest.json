@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.41583f92.chunk.css",
+    "main.js": "/static/js/main.167b5ac5.chunk.js",
+    "main.js.map": "/static/js/main.167b5ac5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e24cc8d9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e24cc8d9.js.map",
+    "static/js/2.8d24922c.chunk.js": "/static/js/2.8d24922c.chunk.js",
+    "static/js/2.8d24922c.chunk.js.map": "/static/js/2.8d24922c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.41583f92.chunk.css.map": "/static/css/main.41583f92.chunk.css.map",
+    "static/js/2.8d24922c.chunk.js.LICENSE.txt": "/static/js/2.8d24922c.chunk.js.LICENSE.txt",
+    "static/media/cancel.17825c74.svg": "/static/media/cancel.17825c74.svg",
+    "static/media/clock.43053169.svg": "/static/media/clock.43053169.svg",
+    "static/media/create.8881a01f.svg": "/static/media/create.8881a01f.svg",
+    "static/media/facebook.3f7115f9.svg": "/static/media/facebook.3f7115f9.svg",
+    "static/media/github.fa0212fe.svg": "/static/media/github.fa0212fe.svg",
+    "static/media/group.72034273.svg": "/static/media/group.72034273.svg",
+    "static/media/locker.d91db54b.svg": "/static/media/locker.d91db54b.svg",
+    "static/media/logout.4c3a4716.svg": "/static/media/logout.4c3a4716.svg",
+    "static/media/reading.d7924dcb.svg": "/static/media/reading.d7924dcb.svg",
+    "static/media/shuttle.fc0c0af1.svg": "/static/media/shuttle.fc0c0af1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e24cc8d9.js",
+    "static/js/2.8d24922c.chunk.js",
+    "static/css/main.41583f92.chunk.css",
+    "static/js/main.167b5ac5.chunk.js"
+  ]
+}
