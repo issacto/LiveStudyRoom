@@ -29,12 +29,13 @@ const VideoChat = props=> {
       writeData(roomName)
       const data = await fetch("/video/token", {
         method: "POST",
+        
         body: JSON.stringify({
           identity: username,
           room: roomName,
         }),
         headers: {
-          "Content-Type": "application/json",
+          "content-type": "application/json",
         },
       }).then((res) => res.json());
       Video.connect(data.token, {
