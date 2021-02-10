@@ -6,11 +6,16 @@ const { videoToken } = require('./tokens');
 var cors = require('cors')
 
 
+const corsOptions = {
+  origin: 'https://livechatroom2021.herokuapp.com',
+  optionsSuccessStatus: 200
+}
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(pino);
-app.use(cors());
+app.use(cors(corsOptions));
 
 const sendTokenResponse = (token, res) => {
   res.set('Content-Type', 'application/json');
@@ -34,7 +39,7 @@ app.get('/video/token', (req, res) => {
   sendTokenResponse(token, res);
 
 });
-app.post('/video/token',  cors(), (req, res) => {
+app.post('/video/token', (req, res) => {
   const identity = req.body.identity;
   const room = req.body.room;
   const token = videoToken(identity, room, config);
